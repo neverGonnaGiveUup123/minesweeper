@@ -1,14 +1,14 @@
 import pygame
-import settings
+import settings as settings
 import sys
-from minesweeper import Minesweeper
+from core.minesweeper import Minesweeper
 
 def main_loop():
     pygame.init()
     pygame.display.set_caption("Minesweeper")
     SCREEN = pygame.display.set_mode((settings.SCREEN_SIZE, settings.SCREEN_SIZE + 100))
 
-    game = Minesweeper(SCREEN)
+    game = Minesweeper(SCREEN, settings.TILES_NUM)
     game.initialise_board()
 
     while True:
